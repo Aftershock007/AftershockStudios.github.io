@@ -1,0 +1,856 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------------------BIKE-ANIMATION--------------------*/
+#bike {
+    text-align: right;
+    margin-right: 60px;
+    margin-top: -650px;
+}
+
+#right-wheel,
+#left-wheel {
+    animation: wheel 2s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#man-bike {
+    animation: bike 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+#hat {
+    animation: hat 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes wheel {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes bike {
+    from {
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateX(15deg);
+    }
+}
+
+@keyframes hat {
+    from {
+        transform: translateY(0%) rotateZ(0deg);
+    }
+
+    to {
+        transform: translateY(30%) rotateZ(18deg);
+    }
+}
+
+/*--------------------AFTERSHOCK STUDIO--------------------*/
+#Svg {
+    display: inline-block;
+    width: 40%;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+.anime {
+    stroke: #00008b;
+    font-size: 100px;
+    font-weight: 700;
+    stroke-width: 2;
+    animation: textAnimate 2s infinite alternate;
+}
+
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+    }
+
+    100% {
+        stroke-dasharray: 50% 0;
+        fill: coral;
+    }
+}
+
+/* -----------------------About Me----------------------- */
+.about {
+    font-family: 'Raleway';
+    margin-left: 350px;
+    margin-top: 250px;
+    font-size: 60px;
+    font-weight: normal;
+}
+
+.para1 {
+    margin-left: 150px;
+    margin-top: 25px;
+    font-family: 'Raleway';
+    font-size: 22px;
+    line-height: 0.4;
+}
+
+.para2 {
+    margin-left: 210px;
+    margin-top: 25px;
+    font-family: 'Raleway';
+    font-size: 22px;
+    line-height: 0.4;
+}
+
+.para3 {
+    margin-left: 347px;
+    margin-top: 25px;
+    font-family: 'Raleway';
+    font-size: 22px;
+    line-height: 0.4;
+}
+
+.para4 {
+    margin-left: 115px;
+    margin-top: 25px;
+    font-family: 'Raleway';
+    font-size: 22px;
+    line-height: 0.4;
+}
+
+.para5 {
+    margin-left: 233px;
+    margin-top: 25px;
+    font-family: 'Raleway';
+    font-size: 22px;
+    line-height: 0.6;
+}
+
+.image {
+    width: 12rem;
+    border-radius: 50%;
+    margin-left: -416px;
+    position: absolute;
+    top: 360px;
+}
+
+#about-me1 {
+    margin-left: -30px;
+    margin-top: 300px;
+}
+
+/* -------------------------------Follow------------------------------- */
+.follow {
+    padding-top: 100px;
+    margin-top: 100px;
+}
+
+/* -----------------------Clock----------------------- */
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin-top: 1800px; 
+    margin-bottom: -100px;
+}
+
+.clock {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+    margin-left: 40%;
+    margin-bottom: 100px;
+    background: url(clock.png);
+    background-color: #d9f7f7;
+    background-size: cover;
+    border: 4px solid #eedcdc;
+    border-radius: 50%;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+        10px 10px 10px rgba(0, 0, 0, 0.1),
+        inset -8px -8px 15px rgba(255, 255, 255, 0.5),
+        inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    justify-content: center;
+    align-items: center;
+    background: #008eff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
+
+.clock .hour,
+.hr {
+    width: 1px;
+    height: 160px;
+}
+
+.clock .min,
+.mn {
+    width: 0px;
+    height: 200px;
+}
+
+.clock .sec,
+.sc {
+    width: 1px;
+    height: 240px;
+}
+
+.hr,
+.mn,
+.sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #ff105e;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    background: #091921;
+    z-index: 15;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 140px;
+    background: #eeceaf;
+    z-index: 20;
+    border-radius: 6px 6px 0 0;
+}
+
+*/
+
+/* -----------------------------Snowman----------------------------- */
+
+.snow {
+    width: 500px;
+    height: 500px;
+    margin-top: 200px;
+    margin-left: 150px;
+}
+
+/* -----------------------------Socials----------------------------- */
+.social {
+    font-family: 'Raleway';
+    font-size: 60px;
+    font-weight: normal;
+    margin-top: -400px;
+    margin-left: 365px;
+}
+
+.social-media {
+    padding-left: 40px;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+#s1 {
+    margin-left: 175px;
+}
+
+.text-pic {
+    margin-left: 800px;
+}
+
+/* -----------------------------Skills----------------------------- */
+.content {
+    position: relative;
+    margin-bottom: -50px;
+}
+
+.content h2 {
+    font-family: 'Yusei Magic';
+    font-weight: lighter;
+    position: relative;
+    margin-left: 45%;
+    margin-top: 17.5%;
+    font-size: 5.5em;
+    color: white;
+    /* -webkit-text-stroke: 0px #9ccc65; */
+}
+
+.content h2::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: #9ccc65;
+    -webkit-text-stroke: 0vw white;
+    border-right: 2px solid #9ccc65;
+    overflow: hidden;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 23%;
+    }
+}
+
+/* -----------------------------Skills Chart----------------------------- */
+.skills {
+    display: flex;
+    align-items: center;
+    height: 50vh;
+}
+
+.skill-item {
+    color: orange;
+    padding-left: 50px;
+    margin-left: 400px;
+}
+
+.skill-item .chart {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.skill-item .chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.html {
+    margin-left: 35.2px;
+}
+
+.css {
+    margin-left: 46px;
+}
+
+.bootstrap {
+    margin-left: 4.8px;
+}
+
+.second-skill {
+    margin-top: 60%;
+}
+
+/*--------------------------------------*/
+#two {
+    padding: 30rem;
+    margin-left: -31%;
+    margin-top: -20%;
+}
+
+#photoshop {
+    margin-left: -0.2px;
+}
+
+#illustartor {
+    margin-left: -6px;
+}
+
+#figma {
+    margin-left: 39px;
+}
+
+#blender {
+    margin-left: 20.6px;
+}
+
+/*--------------------------------------*/
+#three {
+    padding: 20rem;
+    margin-left: -31%;
+    margin-top: -38%;
+}
+
+#cc {
+    margin-left: 450px;
+}
+
+#kk {
+    margin-left: 430px;
+}
+
+#jj {
+    margin-left: 460px;
+}
+
+#pp {
+    margin-left: 430px;
+}
+
+#c {
+    margin-left: 49px;
+}
+
+#kotlin {
+    margin-left: 31px;
+}
+
+#javascript {
+    margin-left: 3.3px;
+}
+
+#python {
+    margin-left: -2px;
+}
+
+/*-----------------------------Resume-----------------------------*/
+.res {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: -170px;
+}
+
+.res h2 {
+    font-family: 'Raleway';
+    font-size: 60px;
+    font-weight: normal;
+}
+
+/*-----------------------------Resume Image-----------------------------*/
+.loader {
+    /* display: flex; */
+    flex-direction: row;
+    margin-left: 50%;
+    padding: 50px;
+}
+
+.loader .lode {
+    position: absolute;
+    width: 50px;
+    height: 300px;
+    margin: 100px;
+    overflow: hidden;
+    border-radius: 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05, #edf1f4));
+    border: 2px solid #edf1f4;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1),
+        -15px -15px 20px #fff,
+        inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+        inset 5px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+.loader .lode::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    border-radius: 40px;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1),
+        -15px -15px 20px #fff,
+        inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+        inset 5px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+.loader .lode::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 47px;
+    height: 47px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.2),
+        0 420px 0 400px #2196f3;
+    animation: anime 2.5s ease-in-out infinite;
+    transform: translateY(260px);
+    animation-delay: calc(-0.2s*var(--i));
+}
+
+@keyframes anime {
+    0% {
+        transform: translateY(260px);
+        filter: hue-rotate(180deg);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(260px);
+        filter: hue-rotate(0deg);
+    }
+}
+
+#ld {
+    margin-top: -350px;
+    margin-left: 55%;
+}
+
+#l0 {
+    margin-left: 250px;
+}
+
+#l1 {
+    margin-left: 350px;
+}
+
+#l2 {
+    margin-left: 450px;
+}
+
+#l3 {
+    margin-left: 550px;
+}
+
+#l4 {
+    margin-left: 650px;
+}
+
+/*-----------------------------Resume Text-----------------------------*/
+.resume-txt {
+    margin-top: 195px;
+    margin-left: 18.558%;
+    font-size: 25px;
+}
+
+/*-----------------------------Resume Download-----------------------------*/
+.resume-btn {
+    justify-content: center;
+    align-items: center;
+    margin-left: 22.8%;
+    margin-top: 40px;
+}
+
+.resume-btn-two {
+    position: relative;
+    padding: 10px 30px;
+    margin: 0 15px;
+    color: #9ccc65;
+    text-decoration: none;
+    overflow: hidden;
+    letter-spacing: 2px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.resume-btn-two:nth-child(1) {
+    filter: hue-rotate(115deg);
+}
+
+.resume-btn-two:hover {
+    background-color: #9ccc65;
+    color: rgb(255, 68, 0);
+    box-shadow: 0 0 50px #21ebff;
+    transition-delay: 0.3s;
+    text-decoration: none;
+}
+
+.resume-btn-two::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #9ccc65;
+    border-left: 2px solid #9ccc65;
+    transition: 0.5s;
+    transition-delay: 0.3s;
+    text-decoration: none;
+}
+
+.resume-btn-two:hover::before {
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+    text-decoration: none;
+}
+
+.resume-btn-two::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #9ccc65;
+    border-right: 2px solid #9ccc65;
+    transition: 0.5s;
+    transition-delay: 0.3s;
+    text-decoration: none;
+}
+
+.resume-btn-two:hover::after {
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+    text-decoration: none;
+}
+
+/*--------------------------------Coffee-text--------------------------------*/
+#coffee {
+    margin-top: 390px;
+    margin-left: 55%;
+    letter-spacing: 1px;
+}
+
+/*--------------------------------Coffee-Photo--------------------------------*/
+.container-last {
+    position: relative;
+    top: 50px;
+    margin-left: -30px;
+    margin-top: 380px;
+}
+
+.cup {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to right, #f9f9f9, #ADD8E6);
+    border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 45%;
+    margin-left: 320px;
+}
+
+.top {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to right, #f9f9f9, #ADD8E6);
+}
+
+.circle-1 {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    margin-left: -4px;
+    margin-top: -30px;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to left, #f9f9f9, #ADD8E6);
+    border-radius: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.tea {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#c57e65, #6f4e37);
+    border-radius: 50%;
+}
+
+.handle {
+    position: absolute;
+    right: -70px;
+    top: 40px;
+    width: 160px;
+    height: 180px;
+    border: 25px solid #ADD8E6;
+    border-left: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-radius: 50%;
+    transform: rotate(42deg);
+
+}
+
+.plate {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 200px;
+    border-radius: 60%;
+    box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
+    margin-left: -500px;
+}
+
+.plate::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    background: linear-gradient(to left, #f9f9f9, #f4f7f6);
+}
+
+.plate::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    background: radial-gradient(rgba(0, 0, 0, 0.2) 25%, transparent, transparent);
+    border-radius: 50%;
+}
+
+.vapour {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.vapour span {
+    position: relative;
+    bottom: 50px;
+    margin: 0 2px 50px;
+    min-width: 8px;
+    height: 120px;
+    background: #de9967;
+    border-radius: 50%;
+    animation: anima 5s linear infinite;
+    opacity: 0;
+    filter: blur(8px);
+    animation-delay: calc(var(--i)*-0.5s);
+}
+
+@keyframes anima {
+    0% {
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-150px) scaleX(5);
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-300px) scaleX(10);
+    }
+}
+
+/*-----------------------------------------Coffee Discussion-----------------------------------------*/
+.coffee-disc {
+    position: absolute;
+    margin-top: 480px;
+    margin-left: 45%;
+}
+
+.disc {
+    font-size: 25px;
+    font-family: 'poppins';
+}
+
+/*-----------------------------------------Mail-----------------------------------------*/
+.mail {
+    font-size: 30px;
+    margin-left: 197px;
+    font-family: 'poppins';
+    font-weight: 700;
+}
+
+/*-----------------------------------------Footer-image-----------------------------------------*/
+.f-img {
+    position: absolute;
+    margin-left: 35%;
+    width: 40rem;
+    height: 27rem;
+    margin-top: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*-----------------------------------------Footer-left-text-----------------------------------------*/
+.copy {
+    position: absolute;
+    font-size: 25px;
+    margin-top: 22%;
+    margin-left: 10%;
+    font-weight: bold;
+    color: #78A2CC;
+    /* font-family: 'poppins'; */
+}
+
+.copy-2 {
+    position: absolute;
+    font-size: 25px;
+    margin-left: 10%;
+    margin-top: 480px;
+    color: #96B9D0;
+    font-family: 'poppins';
+}
+
+/*-----------------------------------------Footer-right-text-----------------------------------------*/
+.made {
+    position: absolute;
+    font-size: 25px;
+    margin-top: 24%;
+    margin-left: 76%;
+    color: #96B9D0;
+    font-family: 'poppins';
+}
+
+.naming {
+    color: #88AED0;
+    position: absolute;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 27%;
+    margin-left: 79.2%;
+}

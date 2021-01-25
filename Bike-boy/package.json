@@ -1,0 +1,24 @@
+{
+  "name": "bike-boy",
+  "version": "1.0.0",
+  "description": "This is my website",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Arijit Biswas",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.13",
+    "slugify": "^1.4.6"
+  },
+  "keywords": [
+    "Aftershock"
+  ],
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
