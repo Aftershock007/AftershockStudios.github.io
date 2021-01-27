@@ -4,11 +4,16 @@
     box-sizing: border-box;
 }
 
+#parent {
+    display: flex;
+}
+
 /*--------------------BIKE-ANIMATION--------------------*/
 #bike {
+    position: absolute;
     text-align: right;
-    margin-right: 60px;
-    margin-top: -650px;
+    margin-left: 55%;
+    margin-top: 150px;
 }
 
 #right-wheel,
@@ -61,10 +66,12 @@
 
 /*--------------------AFTERSHOCK STUDIO--------------------*/
 #Svg {
+    position: absolute;
     display: inline-block;
     width: 40%;
-    margin-top: 0px;
-    margin-left: 20px;
+    height: 40%;
+    margin-top: -40px;
+    margin-left: 30px;
 }
 
 .anime {
@@ -91,7 +98,7 @@
 .about {
     font-family: 'Raleway';
     margin-left: 350px;
-    margin-top: 250px;
+    margin-top: 270px;
     font-size: 60px;
     font-weight: normal;
 }
@@ -122,7 +129,7 @@
 
 .para4 {
     margin-left: 115px;
-    margin-top: 25px;
+    margin-top: 55px;
     font-family: 'Raleway';
     font-size: 22px;
     line-height: 0.4;
@@ -139,14 +146,21 @@
 .image {
     width: 12rem;
     border-radius: 50%;
-    margin-left: -416px;
+    margin-left: 372px;
     position: absolute;
     top: 360px;
 }
 
 #about-me1 {
+    position: absolute;
     margin-left: -30px;
     margin-top: 300px;
+}
+
+#about-me2 {
+    position: absolute;
+    margin-left: -3px;
+    margin-top: 38.5%;
 }
 
 /* -------------------------------Follow------------------------------- */
@@ -263,12 +277,13 @@
 
 */
 
-/* -----------------------------Snowman----------------------------- */
+/* -----------------------------Social-image----------------------------- */
 
 .snow {
+    position: absolute;
     width: 500px;
     height: 500px;
-    margin-top: 200px;
+    margin-top: 50%;
     margin-left: 150px;
 }
 
@@ -277,7 +292,7 @@
     font-family: 'Raleway';
     font-size: 60px;
     font-weight: normal;
-    margin-top: -400px;
+    margin-top: 400px;
     margin-left: 365px;
 }
 
@@ -292,24 +307,26 @@
 }
 
 .text-pic {
+    position: absolute;
     margin-left: 800px;
+    margin-top: 33%;
 }
 
 /* -----------------------------Skills----------------------------- */
 .content {
-    position: relative;
-    margin-bottom: -50px;
+    position: absolute;
+    margin-top: 82%;
+    margin-left: 45%;
 }
 
 .content h2 {
     font-family: 'Yusei Magic';
     font-weight: lighter;
-    position: relative;
+    position: absolute;
     margin-left: 45%;
     margin-top: 17.5%;
     font-size: 5.5em;
     color: white;
-    /* -webkit-text-stroke: 0px #9ccc65; */
 }
 
 .content h2::before {
@@ -320,7 +337,7 @@
     width: 0%;
     height: 100%;
     color: #9ccc65;
-    -webkit-text-stroke: 0vw white;
+    /* -webkit-text-stroke: 0vw white; */
     border-right: 2px solid #9ccc65;
     overflow: hidden;
     animation: animate 3s linear infinite;
@@ -336,11 +353,16 @@
 
     70%,
     90% {
-        width: 23%;
+        width: 92%;
     }
 }
 
 /* -----------------------------Skills Chart----------------------------- */
+#skill-total {
+    margin-top: 90%;
+    margin-left: -50px;
+}
+
 .skills {
     display: flex;
     align-items: center;
@@ -448,13 +470,20 @@
 }
 
 /*-----------------------------Resume-----------------------------*/
+
 .res {
     position: absolute;
     margin-left: 22%;
-    margin-top: -170px;
+}
+
+#res-1 {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: -15%;
 }
 
 .res h2 {
+    position: absolute;
     font-family: 'Raleway';
     font-size: 60px;
     font-weight: normal;
@@ -462,8 +491,7 @@
 
 /*-----------------------------Resume Image-----------------------------*/
 .loader {
-    /* display: flex; */
-    flex-direction: row;
+    position: absolute;
     margin-left: 50%;
     padding: 50px;
 }
@@ -531,7 +559,7 @@
 }
 
 #ld {
-    margin-top: -350px;
+    margin-top: -25%;
     margin-left: 55%;
 }
 
@@ -557,21 +585,23 @@
 
 /*-----------------------------Resume Text-----------------------------*/
 .resume-txt {
-    margin-top: 195px;
+    position: absolute;
+    margin-top: -10%;
     margin-left: 18.558%;
     font-size: 25px;
 }
 
 /*-----------------------------Resume Download-----------------------------*/
 .resume-btn {
+    position: absolute;
     justify-content: center;
     align-items: center;
     margin-left: 22.8%;
-    margin-top: 40px;
+    margin-top: -110px;
 }
 
 .resume-btn-two {
-    position: relative;
+    position: absolute;
     padding: 10px 30px;
     margin: 0 15px;
     color: #9ccc65;
@@ -638,9 +668,15 @@
 
 /*--------------------------------Coffee-text--------------------------------*/
 #coffee {
+    position: absolute;
+    font-family: 'Raleway';
     margin-top: 390px;
-    margin-left: 55%;
+    margin-left: 56%;
     letter-spacing: 1px;
+}
+
+#coffee h1 {
+    font-size: 55px;
 }
 
 /*--------------------------------Coffee-Photo--------------------------------*/
@@ -818,6 +854,10 @@
 }
 
 /*-----------------------------------------Footer-left-text-----------------------------------------*/
+#copyright {
+    margin-left: -30px;
+}
+
 .copy {
     position: absolute;
     font-size: 25px;
@@ -853,4 +893,354 @@
     font-family: 'Dancing Script', cursive;
     margin-top: 27%;
     margin-left: 79.2%;
+}
+
+/*-----------------------------------Media-Queries-----------------------------------*/
+
+/*----------------------------Desktop-1----------------------------*/
+@media (max-width: 1600px),
+(max-height: 900px) {
+    #Svg {
+        margin-left: 80px;
+        height: 45%;
+        width: 45%;
+    }
+
+    .para4 {
+        margin-top: 170px;
+    }
+
+    .snow {
+        margin-top: 60%;
+    }
+
+    .text-pic {
+        margin-top: 40%;
+    }
+
+    .content {
+        margin-top: 97%;
+        margin-left: 45%;
+    }
+
+    #skill-total {
+        margin-top: 102%;
+        margin-left: -110px;
+    }
+
+    #resume {
+        margin-left: -100px;
+    }
+
+    #res-1 {
+        margin-top: -200px;
+    }
+
+    .resume-txt {
+        margin-top: -110px;
+    }
+
+    .resume-btn {
+        margin-top: -40px;
+    }
+
+    #coffee {
+        margin-left: 935px;
+        margin-top: 430px;
+    }
+
+    .coffee-disc {
+        margin-top: 520px;
+    }
+
+    .mail {
+        margin-top: -15px;
+    }
+
+    .cup {
+        margin-left: 255px;
+    }
+
+    .plate {
+        margin-left: -410px;
+    }
+
+    .copy {
+        margin-top: 350px;
+    }
+
+    .copy-2 {
+        margin-top: 420px;
+    }
+
+    .f-img {
+        margin-top: 122px;
+    }
+
+    .made {
+        margin-left: 80%;
+    }
+
+    .naming {
+        margin-left: 83.7%;
+    }
+}
+
+/*----------------------------Desktop-2----------------------------*/
+@media (max-width: 1366px),
+(max-height: 768px) {
+    #Svg {
+        margin-left: 50px;
+        height: 50%;
+        width: 50%;
+    }
+
+    .image {
+        margin-left: 295px;
+        margin-top: -40px;
+    }
+
+    #about-me1 {
+        margin-left: -100px;
+        margin-top: 250px;
+    }
+
+    .para4 {
+        margin-top: 200px;
+        margin-left: 49px;
+    }
+
+    .para5 {
+        margin-left: 165px;
+    }
+
+    .snow {
+        margin-top: 67%;
+        margin-left: 120px;
+    }
+
+    .text-pic {
+        margin-top: 44%;
+        margin-left: 600px;
+    }
+
+    .content {
+        margin-top: 110%;
+        margin-left: 48%;
+    }
+
+    #skill-total {
+        margin-top: 118%;
+        margin-left: -90px;
+    }
+
+    .Container-one {
+        margin-left: -45px;
+    }
+
+    #two {
+        margin-left: -540px;
+    }
+
+    #three {
+        margin-left: -540px;
+    }
+
+    #resume {
+        margin-left: -100px;
+    }
+
+    #res-1 {
+        margin-top: -150px;
+    }
+
+    .resume-txt {
+        margin-top: -70px;
+    }
+
+    .resume-btn {
+        margin-top: -5px;
+        margin-left: 328px;
+    }
+
+    #coffee {
+        margin-left: 835px;
+        margin-top: 430px;
+    }
+
+    .coffee-disc {
+        margin-top: 520px;
+        margin-left: 650px;
+    }
+
+    .disc {
+        font-size: 23px;
+    }
+
+    .mail {
+        margin-top: -15px;
+        margin-left: 170px;
+    }
+
+    .cup {
+        margin-left: 200px;
+    }
+
+    .plate {
+        margin-left: -350px;
+    }
+
+    .copy {
+        margin-top: 350px;
+    }
+
+    .copy-2 {
+        margin-top: 420px;
+    }
+
+    .f-img {
+        margin-top: 122px;
+    }
+
+    .made {
+        margin-top: 380px;
+        margin-left: 82.5%;
+        width: 40%;
+    }
+
+    .naming {
+        width: 40%;
+        margin-top: 430px;
+        margin-left: 86.5%;
+    }
+}
+
+/*----------------------------Mobile----------------------------*/
+@media (max-width: 1080px),
+(max-height: 2340px) {
+    #Svg {
+        margin-left: 50px;
+        height: 50%;
+        width: 50%;
+        margin-top: -400px;
+    }
+
+    .image {
+        margin-left: 295px;
+        margin-top: -40px;
+    }
+
+    #about-me1 {
+        margin-left: -100px;
+        margin-top: 250px;
+    }
+
+    .para4 {
+        margin-top: 200px;
+        margin-left: 49px;
+    }
+
+    .para5 {
+        margin-left: 165px;
+    }
+
+    .snow {
+        margin-top: 67%;
+        margin-left: 120px;
+    }
+
+    .text-pic {
+        margin-top: 44%;
+        margin-left: 600px;
+    }
+
+    .content {
+        margin-top: 110%;
+        margin-left: 48%;
+    }
+
+    #skill-total {
+        margin-top: 118%;
+        margin-left: -90px;
+    }
+
+    .Container-one {
+        margin-left: -45px;
+    }
+
+    #two {
+        margin-left: -540px;
+    }
+
+    #three {
+        margin-left: -540px;
+    }
+
+    #resume {
+        margin-left: -100px;
+    }
+
+    #res-1 {
+        margin-top: -150px;
+    }
+
+    .resume-txt {
+        margin-top: -70px;
+    }
+
+    .resume-btn {
+        margin-top: -5px;
+        margin-left: 328px;
+    }
+
+    #coffee {
+        margin-left: 835px;
+        margin-top: 430px;
+    }
+
+    .coffee-disc {
+        margin-top: 520px;
+        margin-left: 650px;
+    }
+
+    .disc {
+        font-size: 23px;
+    }
+
+    .mail {
+        margin-top: -15px;
+        margin-left: 170px;
+    }
+
+    .cup {
+        margin-left: 200px;
+    }
+
+    .plate {
+        margin-left: -350px;
+    }
+
+    .copy {
+        margin-top: 350px;
+    }
+
+    .copy-2 {
+        margin-top: 420px;
+    }
+
+    .f-img {
+        margin-top: 122px;
+    }
+
+    .made {
+        margin-top: 380px;
+        margin-left: 82.5%;
+        width: 40%;
+    }
+
+    .naming {
+        width: 40%;
+        margin-top: 430px;
+        margin-left: 86.5%;
+    }
 }
