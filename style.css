@@ -1116,7 +1116,7 @@
 }
 
 /*----------------------------Mobile----------------------------*/
-@media (max-width: 1080px),
+/* @media (max-width: 1080px),
 (max-height: 2340px) {
     #Svg {
         margin-left: 50px;
@@ -1243,4 +1243,4 @@
         margin-top: 430px;
         margin-left: 86.5%;
     }
-}
+}  */
